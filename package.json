@@ -1,10 +1,12 @@
 {
   "name": "now-playing",
+  "productName": "Spotify Now Playing",
   "version": "1.0.0",
   "description": "Spotify now playing ",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icon.icns --prune=true --out=release-builds"
   },
   "author": "Keegan Lawley",
   "license": "ISC",
@@ -13,6 +15,7 @@
     "nodemon": "^1.18.9"
   },
   "dependencies": {
+    "electron-packager": "^11.2.1",
     "menubar": "^5.2.3",
     "spotify-web-api-node": "^4.0.0"
   }
